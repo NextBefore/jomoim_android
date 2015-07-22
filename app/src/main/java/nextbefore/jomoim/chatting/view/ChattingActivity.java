@@ -2,15 +2,13 @@ package nextbefore.jomoim.chatting.view;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
 import nextbefore.jomoim.R;
 import nextbefore.jomoim.chatting.entity.Message;
-import nextbefore.jomoim.chatting.model.DAO;
+import nextbefore.jomoim.chatting.model.ChattingDataAccessor;
 
 public class ChattingActivity extends ActionBarActivity {
 
@@ -23,6 +21,7 @@ public class ChattingActivity extends ActionBarActivity {
     interface Listener{
         void sendMessage();
         void receiveMessage();
+
     }
 
 
@@ -31,7 +30,7 @@ public class ChattingActivity extends ActionBarActivity {
      * topic변수는 이전 Activity에서 받아와 이 topic을 이용해 mqtt로 채팅을 구현.
      */
     private String topic;
-    private DAO dao;
+    private ChattingDataAccessor dao;
     private ArrayList<Message> messages;
     private ListView listView;
 
@@ -59,9 +58,14 @@ public class ChattingActivity extends ActionBarActivity {
     }
 
 
+    /*
+     * getChattingHistory메소드
+     * 역할 : dao를 이용해 데이터베이스에 접근하여 해당 채팅의 topic에 해당하는 채팅 내용을 가져옴
+     */
     private ArrayList<Message> getChattingHistory(){
         topic = getIntent().getExtras().getString("Topic");
-        dao = DAO.getInstance(topic);
+        dao = ChattingDataAccessor.getInstance();
+        return dao.getMessages(topic);
     }
 
 
