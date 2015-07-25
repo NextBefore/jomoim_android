@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/imageView_taskDetail_profile"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/task_arrange_student"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="할당된 일"
+            android:id="@+id/textView_taskDetail_sumOfTask"
+            android:layout_alignTop="@+id/imageView_taskDetail_profile"
+            android:layout_toRightOf="@+id/imageView_taskDetail_profile"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="완료한 일"
+            android:id="@+id/textView_taskDetail_done"
+            android:layout_below="@+id/textView_taskDetail_sumOfTask"
+            android:layout_toRightOf="@+id/imageView_taskDetail_profile"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="해야할 일"
+            android:id="@+id/textView_taskDetail_todo"
+            android:layout_below="@+id/textView_taskDetail_done"
+            android:layout_toRightOf="@+id/imageView_taskDetail_profile"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:id="@+id/textView_taskDetail_sumOfTask_count"
+            android:layout_alignTop="@+id/textView_taskDetail_sumOfTask"
+            android:layout_toRightOf="@+id/textView_taskDetail_sumOfTask"
+            android:layout_marginLeft="40dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:id="@+id/textView_taskDetail_done_count"
+            android:layout_alignTop="@+id/textView_taskDetail_done"
+            android:layout_toRightOf="@+id/textView_taskDetail_done"
+            android:layout_marginLeft="40dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:id="@+id/textView_taskDetail_todo_count"
+            android:layout_alignTop="@+id/textView_taskDetail_todo"
+            android:layout_toRightOf="@+id/textView_taskDetail_todo"
+            android:layout_marginLeft="40dp" />
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/chart"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignTop="@+id/textView_taskDetail_sumOfTask_count"
+            android:layout_toRightOf="@+id/textView_taskDetail_sumOfTask_count"
+            android:layout_marginLeft="40dp"
+            />
+    </RelativeLayout>
+
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView_taskDetail" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_taskDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_check_white_24dp"
+        />
+
+</LinearLayout>
