@@ -1,4 +1,4 @@
-package nextbefore.jomoim.model;
+package nextbefore.jomoim.controller;
 
 import android.app.Activity;
 import android.content.Context;
@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import java.util.ArrayList;
 
 import nextbefore.jomoim.R;
+import nextbefore.jomoim.model.User;
 
 /**
  * Created by JaeBong on 15. 7. 8..

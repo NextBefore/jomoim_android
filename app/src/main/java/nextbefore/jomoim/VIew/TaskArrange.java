@@ -10,7 +10,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 import nextbefore.jomoim.R;
-import nextbefore.jomoim.model.TaskArrangeListAdapter;
+import nextbefore.jomoim.controller.TaskArrangeListAdapter;
 import nextbefore.jomoim.model.User;
 
 

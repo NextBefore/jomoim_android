@@ -4,14 +4,14 @@ package nextbefore.jomoim.model;
  * Created by JaeBong on 15. 7. 27..
  */
 public class Task {
-    public String taskTile;
+    public String taskTitle;
     public String taskDetail;
     public long   taskDueDate;
     public User   taskArrangedUser;
     public String taskStatus;
 
-    public Task(String taskTile, String taskDetail, long taskDueDate, User taskArrangedUser) {
-        this.taskTile = taskTile;
+    public Task(String taskTitle, String taskDetail, long taskDueDate, User taskArrangedUser) {
+        this.taskTitle = taskTitle;
         this.taskDetail = taskDetail;
         this.taskDueDate = taskDueDate;
         this.taskArrangedUser = taskArrangedUser;
@@ -26,12 +26,12 @@ public class Task {
         this.taskStatus = taskStatus;
     }
 
-    public String getTaskTile() {
-        return taskTile;
+    public String getTaskTitle() {
+        return taskTitle;
     }
 
-    public void setTaskTile(String taskTile) {
-        this.taskTile = taskTile;
+    public void setTaskTitle(String taskTitle) {
+        this.taskTitle = taskTitle;
     }
 
     public String getTaskDetail() {
